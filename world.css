@@ -1,1 +1,167 @@
-/* Add your own styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f8fa;
+    color: #374151;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    background-color: #485568;
+    padding: 22px 20px;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.globe {
+    width: 130px;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    font-size: 85px;
+    filter: grayscale(1);
+    line-height: 1;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 900;
+    text-shadow: 1px 1px 0 #ddd;
+}
+
+main {
+    width: min(900px, 92%);
+    margin: 32px auto;
+}
+
+#controls {
+    max-width: 570px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#country {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #dce2e8;
+    border-radius: 2px;
+    background-color: white;
+    font: inherit;
+}
+
+#country:focus {
+    outline: 2px solid #38b2ac;
+    outline-offset: 2px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#lookup {
+    background-color: #38b2ac;
+}
+
+#lookup-cities {
+    background-color: #3498db;
+}
+
+button:hover {
+    filter: brightness(0.93);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#result {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e5eaf0;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #edf1f5;
+    text-align: left;
+}
+
+th {
+    background-color: white;
+    color: #263445;
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f5f9;
+}
+
+tbody tr:hover {
+    background-color: #e5f3f5;
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        gap: 14px;
+    }
+
+    .globe {
+        width: 80px;
+        height: 75px;
+        font-size: 58px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}

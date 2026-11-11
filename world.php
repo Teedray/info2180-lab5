@@ -39,13 +39,28 @@ function escapeHtml($value) {
 <?php if (empty($results)): ?>
     <p>No countries found.</p>
 <?php else: ?>
-    <ul>
-        <?php foreach ($results as $row): ?>
-            <li>
-                <?= escapeHtml($row['name']) ?>
-                is ruled by
-                <?= escapeHtml($row['head_of_state']) ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Country Name</th>
+                <th scope="col">Continent</th>
+                <th scope="col">Independence Year</th>
+                <th scope="col">Head of State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($results as $row): ?>
+                <tr>
+                    <td><?= escapeHtml($row['name']) ?></td>
+                    <td><?= escapeHtml($row['continent']) ?></td>
+                    <td>
+                        <?= escapeHtml($row['independence_year'] ?? 'N/A') ?>
+                    </td>
+                    <td>
+                        <?= escapeHtml($row['head_of_state'] ?? 'N/A') ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 <?php endif; ?>

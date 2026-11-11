@@ -13,14 +13,26 @@
 
 	<body>
 		<header>
-			<h1>World Database Lookup</h1>
+			<div class="header-content">
+				<span class="globe" aria-hidden="true">🌍</span>
+				<h1>World Database Lookup</h1>
+			</div>
 		</header>
 
 		<main>
 			<div id="controls">
 				<label for="country">Country:</label>
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+
+				<input
+					id="country"
+					type="search"
+					name="country"
+					placeholder="Enter country name"
+				>
+
+				<div class="buttons">
+					<button id="lookup" type="button">Lookup Country</button>
+				</div>
 			</div>
 			
 			<div id="result">
